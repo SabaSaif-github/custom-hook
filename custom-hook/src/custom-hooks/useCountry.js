@@ -6,7 +6,7 @@ const useCountry = (countryName) => {
   const [error, setError] = useState(null);
 
   let url = `https://restcountries.eu/rest/v2/${
-    countryName === undefined ? `all` : `name/${countryName}`
+    countryName ? `name/${countryName}` : `all` 
   }`;
 
   useEffect(() => {
